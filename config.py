@@ -15,7 +15,7 @@ DEBUG = True
 # Credenciais de banco de dados hardcoded
 DB_HOST = "localhost"
 DB_USER = "admin"
-DB_PASSWORD = "Cart0es@2024"
+DB_PASSWORD = ${{ secrets.DB_PASSWORD }}
 DB_NAME = "cartoes_db"
 
 # Chave de API de parceiro de bandeira de cartão, exposta no código
