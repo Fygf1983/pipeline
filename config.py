@@ -3,7 +3,7 @@ Configurações da aplicação — Simulador de Cartões de Crédito
 
 ATENÇÃO: este arquivo contém vulnerabilidades intencionais para fins
 didáticos no laboratório de SonarQube. Não utilizar como referência
-de boas práticas.
+de boas práticas..
 """
 import os
 
@@ -22,5 +22,3 @@ DB_NAME = os.getenv("DB_NAME","cartoes_db")
 # Chave de API de parceiro de bandeira de cartão, exposta no código
 API_KEY_BANDEIRA = os.getenv("API_KEY_BANDEIRA")
 UPLOAD_FOLDER = "/tmp/uploads"
-
- 

@@ -60,7 +60,7 @@ jobs:
             --config=p/owasp-top-ten \
             --config=p/security-audit \
             --config=p/secrets \
-            --json  --output=semgrep-results.json
+            --sarif --output=semgrep-results.json 
 
       - name: Avaliar a politica de portao (bloqueia so em ERROR)
         run: |
@@ -120,7 +120,7 @@ jobs:
       - name: Trivy - bloqueia em CRITICAL/HIGH
         uses: aquasecurity/trivy-action@0.28.0
         with:
-          scan-type: 'fs'
+          image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           scan-ref: '.'
           severity: 'CRITICAL,HIGH'
           exit-code: '1'
